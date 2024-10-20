@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>精美果子售卖页面</title>
+    <title>水果售卖页面</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -73,21 +73,6 @@
             width: 80%;
             margin: 20px auto;
             display: block;
-        }
-
-        /* 隐藏二维码容器初始状态 */
-       .qr-code-container {
-            display: none;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-          /* 隐藏购买确认容器初始状态 */
-      .purchase-confirmation {
-            display: none;
-            text-align: center;
-            margin-top: 20px;
-            color: #333;
         }
     </style>
 </head>
@@ -166,10 +151,6 @@
         <source src="赵雷-成都.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-
-    <div class="qr-code-container">
-        <img src="图片\微信图片_20241020214109.jpg" alt="收款二维码">
-    </div>
     
     <div class="purchase-confirmation"></div>
 
@@ -192,15 +173,8 @@
             audio.play();
         }
 
-        function showQrCode() {
-            const qrCodeContainer = document.querySelector('.qr-code-container');
-            qrCodeContainer.style.display = 'block';
-        }
-
-        function showPurchaseConfirmation(fruitName) {
-            const confirmationContainer = document.querySelector('.purchase-confirmation');
-            confirmationContainer.innerHTML = `你成功购买了：${fruitName}`;
-            confirmationContainer.style.display = 'block';
+        function openQrCodePage(fruitName) {
+            window.open('qr_code_page.html?fruit=' + fruitName, '_blank');
         }
 
         function playNextSong() {
