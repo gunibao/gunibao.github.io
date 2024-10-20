@@ -4,28 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>果子售卖</title>
+    <title>精美果子售卖</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            padding: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
        .product-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            padding: 20px;
         }
 
        .product {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 15px;
+            width: 250px;
             text-align: center;
         }
 
        .product img {
-            max-width: 200px;
+            max-width: 180px;
             height: auto;
+            border-radius: 5px;
+        }
+
+       .product h2 {
+            color: #333;
+            margin-top: 10px;
+        }
+
+       .product p {
+            color: #666;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        audio {
+            width: 80%;
+            margin: 20px auto;
+            display: block;
         }
     </style>
 </head>
@@ -33,11 +80,26 @@
 <body>
     <h1>新鲜果子售卖</h1>
     <div class="product-container">
+        <!-- 水果1 -->
         <div class="product">
-            <img src="stock-photo-red-apple-gala-apple-isolated-on-white-background-clipping-path-collection-set-2518070005.jpg" alt="水果图片">
-            <h2>美味水果</h2>
-            <p>新鲜可口的水果。</p>
-            <button onclick="buyFruit()">购买</button>
+            <img src="stock-photo-red-apple-gala-apple-isolated-on-white-background-clipping-path-collection-set-2518070005.jpg" alt="水果 1">
+            <h2>苹果</h2>
+            <p>新鲜美味的苹果。</p>
+            <button onclick="buyFruit('苹果')">购买</button>
+        </div>
+        <!-- 水果2 -->
+        <div class="product">
+            <img src="fruit2.jpg" alt="水果 2">
+            <h2>橙子</h2>
+            <p>多汁的橙子。</p>
+            <button onclick="buyFruit('橙子')">购买</button>
+        </div>
+        <!-- 水果3 -->
+        <div class="product">
+            <img src="fruit3.jpg" alt="水果 3">
+            <h2>香蕉</h2>
+            <p>软糯的香蕉。</p>
+            <button onclick="buyFruit('香蕉')">购买</button>
         </div>
     </div>
 
@@ -56,6 +118,13 @@
             songIndex = (songIndex + 1) % songs.length;
             audio.src = songs[songIndex];
             audio.play();
+        }
+    </script>
+    
+    <script>
+        function buyFruit(fruitName) {
+            // 这里只是模拟购买操作，实际中需调用微信支付接口
+            alert(`你购买了${fruitName}`);
         }
     </script>
 </body>
