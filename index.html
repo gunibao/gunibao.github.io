@@ -164,7 +164,8 @@
             // 这里只是模拟购买操作，实际中需调用微信支付接口
             alert(`你购买了${fruitName}`);
             playAudio();
-            showQrCode();
+            // showQrCode();
+            openQrCodePage(fruitName);
             showPurchaseConfirmation(fruitName);
         }
 
