@@ -18,7 +18,7 @@ function checkSecret() {
     if (secretInput.value === 'ywt是大帅哥') {
         accountInfo.innerHTML = `
             <p>账号：784597@nubz.top</p>
-            <p>密码：asd2024</p>
+            <p>密码：sd2024</p>
             <p style="color: red; margin-top: 10px; font-size: 0.9em;">
                 请注意保密，不要分享给他人！进入后请选2号位！
             </p>
