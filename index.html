@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能2班 - 欢迎您</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">智能2班</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="login.html">聊天室</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>欢迎来到智能2班</h1>
+            <p>团结友爱 · 共同进步</p>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>班级简介</h3>
+                <p>我们是一个充满活力和创造力的集体...</p>
+            </div>
+            <div class="feature-card">
+                <h3>最新动态</h3>
+                <p>近期班级活动和重要通知...</p>
+            </div>
+            <div class="feature-card">
+                <h3>荣誉墙</h3>
+                <p>展示班级和同学们取得的优秀成果...</p>
+            </div>
+        </section>
+
+        <section class="netflix-section">
+            <div class="netflix-container">
+                <h3>获取 Netflix 账号</h3>
+                <div id="passwordSection">
+                    <input type="password" id="passwordInput" placeholder="请输入智能2班密码">
+                    <button onclick="checkPassword()">验证密码</button>
+                </div>
+                <div id="secretSection" class="hidden">
+                    <p class="secret-hint">暗号是：余文涛是大帅哥</p>
+                    <input type="text" id="secretInput" placeholder="请输入暗号">
+                    <button onclick="checkSecret()">验证暗号</button>
+                </div>
+                <div id="accountInfo" class="hidden"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>智能2</p>
+    </footer>
+</body>
+</html> 
